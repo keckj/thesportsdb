@@ -13,5 +13,8 @@ def _make_url(endpoint: str) -> str:
 def make_request(endpoint: str, **kwargs):
     params = kwargs
     URL = _make_url(endpoint)
-    response = requests.get(URL, params=params)
+    if TSD.SESSION is None:
+        response = requests.get(URL, params=params)
+    else:
+        response = TSD.SESSION.get(URL, params=params)
     return response.json()

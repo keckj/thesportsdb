@@ -1,5 +1,7 @@
 BASE_URL = "https://www.thesportsdb.com/api/v1/json/"
 API_KEY = "1"
+SESSION = None
+
 # ?id=4328 get next 15 events by leagueid
 LEAGUE_NEXT_EVENTS = "/eventsnextleague.php"
 # ?id=4328 get last 15 events by leagueid
